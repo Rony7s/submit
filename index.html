@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+ 
+.container{
+width:400px;}
+
+#submit{
+	width:100px;
+}
+
+
+.sub_area{
+ height:70px;
+}
+</style>
+</head>
+
+
+<body>
+
+<h2>Beautiful Submit Buttun by Rony Ahmmed</h2>
+
+
+<form>
+  <div class="container">
+  
+    <label for="uname"><b>Username</b></label>
+    <input id = "username" type="text" placeholder="Enter Username" name="uname" required>
+    <label for="psw"><b>Password</b></label>
+    <input id ="pass" type="password" placeholder="Enter Password" name="psw"
+	oninput="haha(this.value)" onchange="haha(this.value)"
+	required>
+    <div class="sub_area">
+    <button id="submit" class="sub sub2" type="submit">Submit</button>
+	</div>
+	<h1 id="alarm"></h1>
+	
+  </div>
+</form>
+
+<script>
+
+function haha(len){
+	var i = len.length;
+	
+	if( i >= 8){
+		document.getElementById('alarm').innerHTML= 'Yes! You can click submit button Now';
+		var x = document.querySelector("#alarm");
+		x.style.color = 'green';
+   }else{
+		document.getElementById('alarm').innerHTML= "No! You can't click submit button Now";
+		var x = document.querySelector("#alarm");
+		x.style.color = '#cc0000'; 
+   }
+}
+</script>
+
+</body>
+</html>
